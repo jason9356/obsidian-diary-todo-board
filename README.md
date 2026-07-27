@@ -39,7 +39,7 @@
 1. 安装依赖并构建：
 
 ```powershell
-cd C:\Users\LXP\Projects\obsidian-diary-todo-board
+# 在项目根目录执行
 npm install
 npm run build
 ```
