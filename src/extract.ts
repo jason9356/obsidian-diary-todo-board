@@ -170,7 +170,12 @@ export function toCompletedLine(
 	if (isCompletedTag(head.tagInner, rule)) return null;
 
 	const body = head.after;
-	const gap = body.length > 0 ? head.gap : "";
+	// When bold (**…**) is used, Markdown needs a space after the closing **
+	// otherwise the rest of the line can be styled as bold/highlight too.
+	let gap = body.length > 0 ? head.gap : "";
+	if (rule.boldCompleted && body.length > 0 && gap.length === 0) {
+		gap = " ";
+	}
 	const tag = formatCompletedTag(rule);
 	return `${indent}${number}. ${tag}${gap}${body}`.replace(/\s+$/, "");
 }

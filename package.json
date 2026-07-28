@@ -1,6 +1,6 @@
 {
   "name": "obsidian-diary-todo-board",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Extract ordered-list todos from diary notes into a sidebar board",
   "main": "main.js",
   "scripts": {

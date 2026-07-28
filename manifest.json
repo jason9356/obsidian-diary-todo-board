@@ -1,7 +1,7 @@
 {
   "id": "obsidian-diary-todo-board",
   "name": "日记待办看板",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "minAppVersion": "1.5.0",
   "description": "从日记有序列表自动抽取待办，在独立看板中管理完成状态，不破坏原文阅读体验。",
   "author": "LXP",

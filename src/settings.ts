@@ -195,7 +195,7 @@ export class DiaryTodoSettingTab extends PluginSettingTab {
 		if (!this.previewEl) return;
 		const rule = settingsToTagRule(this.plugin.settings);
 		const openSample = `1. ${rule.open}未完成${rule.close}示例待办`;
-		const doneSample = `1. ${formatCompletedTag(rule)}示例待办`;
+		const doneSample = `1. ${formatCompletedTag(rule)} 示例待办`;
 		this.previewEl.empty();
 		this.previewEl.createEl("div", { text: `抽取示例：${openSample}` });
 		this.previewEl.createEl("div", { text: `完成后：${doneSample}` });

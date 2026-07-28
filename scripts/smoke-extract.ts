@@ -52,8 +52,8 @@ assert(!contents.includes("已经做完的事"), "已完成 skipped");
 assert(!contents.some((c) => c.includes("加粗已完成")), "bold 已完成 skipped");
 
 assert(
-	toCompletedLine("2. 【未完成】处理周报", rule) === "2. **【已完成】**处理周报",
-	"replace unfinished with bold",
+	toCompletedLine("2. 【未完成】处理周报", rule) === "2. **【已完成】** 处理周报",
+	"replace unfinished with bold + space",
 );
 assert(
 	toCompletedLine("5. **【持续中】** 还在跟进的事", rule) ===
@@ -61,8 +61,8 @@ assert(
 	"replace inner as bold",
 );
 assert(
-	toCompletedLine("6. 【待观察】观察中的事", rule) === "6. **【已完成】**观察中的事",
-	"replace 待观察 with bold",
+	toCompletedLine("6. 【待观察】观察中的事", rule) === "6. **【已完成】** 观察中的事",
+	"replace 待观察 with bold + space",
 );
 assert(toCompletedLine("3. 【已完成】已经做完的事", rule) === null, "no double complete");
 assert(toCompletedLine("1. 没有标签", rule) === null, "cannot complete without tag");
